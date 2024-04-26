@@ -1,0 +1,13 @@
+<h2>List des utilisateur</h2>
+<hr>
+<ng-container *ngIf="users.length > 0;else aucunUser">
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.name}}
+        </li>
+    </ul>
+</ng-container>
+
+<ng-template #aucunUser>
+    <p>Il n'y a aucun user pour le moment</p>
+</ng-template>
